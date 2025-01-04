@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    background-color: #f4f4f9;
+    font-family: Georgia;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #aeaeae;
+    overflow: hidden;
+    width: 600px;
+    text-align: center;
+  }
+  
+  .card-top {
+    background: #855b9c;
+    color: white;
+    padding: 15px;
+  }
+  
+  .card-mid {
+    padding: 15px;
+    color: #333;
+  }
+  
+  .card-bottom {
+    background: #f1f1f1;
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: transform 0.5s ease;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotate 1s ease-out;
+  }
+
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+
+  .sub-header {
+    font-size: 1.125rem;
+    color: white;
+    margin: 10px 0;
+  }
+
+  button {
+    background: #855b9c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color;
+  }
+  
+  button:hover {
+    background: #5d3d6e;
+  }
+
+  .about-passion-text {
+    max-height: 0;
+    line-height: 1.5;
+    font-size: .925rem;
+    text-align: justify;
+    overflow: hidden;
+    transition: max-height;
+  }
+  .about-passion-text.show {
+    max-height: 300px;
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Info Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="card-top">
+      <h1>Nikita Rao</h1>
+      <img src="myprofilepic.png" alt="Nikita Rao's photo" id="profile-pic" class="profile-pic">
+      <p class="sub-header">Major: Computer Science</p>
+      <p class="sub-header">Year: Senior</p>
+    </div>
+    <div class="card-mid">
+      <p>From: Johns Creek, GA</p>
+      <p>Passion: Innovating solutions to assist low-income communities.</p>
+    </div>
+    <div class="card-bottom">
+      <button onclick="toggleInfo()">About Passion</button>
+      <div id="extra-info" class="about-passion-text">
+        <p>After designing a smart technology building capable of rehabilitating low-income families, I started a club in high school to improve the lives of the underpriviledged. I am determined to continue this pursuit in college with my developed technical abilities.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggleInfo() {
+      document.getElementById('extra-info').classList.toggle("show");
+    }
+    const profilePic = document.getElementById('profile-pic');
+  
+    profilePic.addEventListener('click', () => {
+      profilePic.classList.add('rotate');
+      profilePic.addEventListener('animationend', () => {
+        profilePic.classList.remove('rotate');
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
